@@ -3,7 +3,6 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-
 package org.lineageos.settings.device;
 
 import android.os.Bundle;
@@ -33,10 +32,11 @@ public class PreferenceActivity extends CollapsingToolbarBaseActivity {
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             addPreferencesFromResource(org.lineageos.settings.besloudness.R.xml.besloudness_panel);
+
             MainSwitchPreference toggle = (MainSwitchPreference)
                     findPreference(BesLoudnessManager.KEY_BESLOUDNESS);
             assert toggle != null;
-            toggle.updateStatus(BesLoudnessManager.get(getContext()));
+            toggle.setChecked(BesLoudnessManager.get(getContext()));
             toggle.addOnSwitchChangeListener(this);
         }
 
