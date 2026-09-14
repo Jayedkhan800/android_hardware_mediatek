@@ -4,6 +4,9 @@ soong_namespace {
         "hardware/google/pixel",
         "hardware/google/pixel/usb",
         "hardware/google/pixel/pixelstats",
+        "hardware/google/pixel/health",
+        "hardware/google/pixel/power-libperfmgr",
+        "hardware/google/pixel/thermal",
     ],
 }
 
